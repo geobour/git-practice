@@ -2,22 +2,30 @@ export default function UsersTable({ users }) {
   return (
     <div>
       <h1></h1>
-      <table border="1" cellPadding="10" cellSpacing="0">
+      <table
+        style={{
+          borderCollapse: "collapse",
+          width: "100%",
+          fontFamily: "Arial, sans-serif",
+          marginTop: "20px",
+        }}
+      >
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
+          <tr style={{ backgroundColor: "#2c3e50", color: "white" }}>
+            <th style={{ padding: "10px", textAlign: "left" }}>ID</th>
+            <th style={{ padding: "10px", textAlign: "left" }}>Name</th>
+            <th style={{ padding: "10px", textAlign: "left" }}>Email</th>
+            <th style={{ padding: "10px", textAlign: "left" }}>Role</th>
           </tr>
         </thead>
+
         <tbody>
           {users.map((u) => (
-            <tr key={u.id}>
-              <td>{u.id}</td>
-              <td>{u.name}</td>
-              <td>{u.email}</td>
-              <td>{u.role}</td>
+            <tr key={u.id} style={{ borderBottom: "1px solid #ccc" }}>
+              <td style={{ padding: "10px" }}>{u.id}</td>
+              <td style={{ padding: "10px" }}>{u.name}</td>
+              <td style={{ padding: "10px" }}>{u.email}</td>
+              <td style={{ padding: "10px" }}>{u.role}</td>
             </tr>
           ))}
         </tbody>

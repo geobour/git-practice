@@ -20,8 +20,16 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>Git Practice - Users Table</h1>
+    <div
+      style={{
+        padding: "40px",
+        fontFamily: "Arial",
+        backgroundColor: "#f5f5f5",
+      }}
+    >
+      <h1 style={{ color: "#2c3e50", textAlign: "center" }}>
+        Git Practice - Styled Users Table
+      </h1>
       <UserSearch onSearch={handleSearch} />
       <UsersTable users={users} />
     </div>
